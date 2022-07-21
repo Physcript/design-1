@@ -165,19 +165,23 @@ nav {
 .third-page .review {
   display: flex;
   height: 100%;
+  padding: 5% 0;
+  gap: 10px;
 }
 
 .review-left-col {
   flex: 2;
   height: 100%;
-  background: red;
   display: flex;
   flex-direction: column;
+  gap: 10px;
 }
 .review-right-col {
   flex: 1;
+  display: flex;
   height: 100%;
-  background: blue;
+  width: 100%;
+  background: #1C2541;
 }
 
 .review-left-col-1 {
@@ -187,40 +191,101 @@ nav {
 
 .review-left-col-2 {
   display: flex;
-  flex-basis: 60%;
+  flex-basis: 60%;  
+  gap: 10px;
 }
 .review-left-col-2-1 {
-  flex: 2
+  flex: 2;
+  display: flex;
+  background: #1C2541;
 }
 .review-left-col-2-2 {
   flex: 1;
   display: flex;
   flex-direction: column;
+  gap: 10px;
 }
 
 .review-left-col-2-2-1, .review-left-col-2-2-2 {
   flex: 1; 
+  background: #1C2541;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 
 .review-right-col {
   display: flex;
   flex-direction: column;
+  height: 100%;
+  justify-content: center;
 }
 
 .review-right-col-1 {
   flex-basis: 40%;
+  background: #1C2541;
 }
 
 .review-right-col-2 {
   flex-basis: 60%;
   display: flex;
   flex-direction: column;
+  gap: 10px;
 }
 
 
 .review-right-col-2-1, .review-right-col-2-2 {
   flex:1;
+  background: #1C2541;
+}
+
+
+.review-left-col-1 {
+  display: flex;
+  gap: 10px;
+}
+
+.comment-pic {
+  align-self: center;
+  align-items: center;
+  padding: 20px;
+}
+
+
+.comment-text {
+  align-self: center;
+  padding: 20px;
+}
+
+.comment-pic .pic img {
+  width: 100px;
+  height: 100px;
+  padding: 10px;
+  border-radius: 100px;
+  object-fit: cover;
+  object-position: center;
+}
+.comment-pic .pics img {
+  width: 50px;
+  height: 50px;
+  border-radius: 100px;
+  object-fit: cover;
+  object-position: center;
+}
+.pics2 {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+
+.review-right-col-1 {
+  display: flex;
+  width: 100%;
+}
+.ct2 {
+  padding: 20px;
 }
 
 @media only screen and (max-width: 1060px) {
@@ -236,7 +301,16 @@ nav {
 }
 
 @media only screen and (max-width: 1060px) {
-   
+  .third-page {
+    display: block;
+    height: 100vh;
+  }
+  .review {
+    flex-direction: column
+  
+  }
+
+
   .main .text-image-bottom {
     display: flex;
     flex-direction: row;
@@ -260,7 +334,16 @@ nav {
 }
 
 @media only screen and (max-width: 460px) {
-  
+  .title {
+    display: block;
+  }
+  .third-page {
+    display: block;
+    height: 100vh;
+  } 
+  .review-left-col-2-2 {
+    display: none;
+  }
   .main .text-image-bottom {
     position: none;
     display: flex;
@@ -278,8 +361,27 @@ nav {
   .main .text-image-bottom .text-bottom {
     font-size: 12px;
   }
-
+  .second-page {
+    height: 100vh;
+    display: block;
+  }
   .second-page .right-col .service-col {
     flex-direction: column;
   }
+  .third-page {
+    display: block;
+    height 100vh;
+  }
+
+  .third-page .review {
+    flex-direction: column;
+  }
 }
+
+
+@media only screen and (max-width: 400px) {
+  .third-page {
+    display: block;
+    margin-top: 30%;
+  }
+} 
