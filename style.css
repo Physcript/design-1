@@ -20,6 +20,9 @@ a {
 .yellow {
   color: #ffff80;
 }
+.large {
+  font-size: 24px;
+}
 .front-page {
   display: grid;
   grid-template-rows: 10vh 80vh 10vh;
@@ -156,6 +159,7 @@ nav {
 .third-page {
   padding: 40px 10%;
   height: 100vh;
+  display: block;
 }
 
 .third-page .title {
@@ -288,6 +292,48 @@ nav {
   padding: 20px;
 }
 
+.fourth-page {
+  padding: 10% 10%;
+  display: block;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+}
+
+.contact {
+  flex: 1;
+  display: flex;
+  flex-flow: column;
+  gap: 10px;
+  justify-content: center;
+  align-self: center;
+  align-items:center; 
+}
+.form {
+  flex: 1;
+  background: #1C2541;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  align-self: center;
+}
+.form input ,  textarea{
+  padding: 5px 8px;
+  resize: none;
+}
+.form button {
+  background: #ffff80;
+  border:none;
+  font-size: 16px;
+  width: 50%;
+  padding: 5px 7px;
+}
+.wrapper {
+}
+
+
+
 @media only screen and (max-width: 1060px) {
   .main .text-image-bottom .text-bottom: {
     
@@ -303,11 +349,12 @@ nav {
 @media only screen and (max-width: 1060px) {
   .third-page {
     display: block;
-    height: 100vh;
+    height: auto;
+  }
+  .review-right-col {
   }
   .review {
-    flex-direction: column
-  
+    flex-direction: column;
   }
 
 
@@ -330,6 +377,16 @@ nav {
   }
   .nav-menu {
     display: block
+  }
+
+  .fourth-page {
+    flex-flow: column;
+    gap: 30px;
+  }
+}
+
+@media only screen and (max-width: 500) {
+  .fourth-page {
   }
 }
 
@@ -375,13 +432,27 @@ nav {
 
   .third-page .review {
     flex-direction: column;
+  } 
+  .fourth-page {
+    margin-top: 70%;
+    height: 100vh;
+    padding: 0 10%;
+    
   }
+
+
+  
 }
 
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 430px) {
+  
   .third-page {
     display: block;
-    margin-top: 30%;
+    font-size: 10px;
+    margin-top: 10%;
   }
-} 
+  .fourth-page {
+  }
+
+ } 
